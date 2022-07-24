@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
+import adapterNetlify from '@sveltejs/adapter-netlify';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +9,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapterNetlify(),
 
 		// Override http methods in the Todo forms
 		methodOverride: {
